@@ -1,0 +1,7 @@
+type Block @entity {
+  id: ID!
+}
+
+type Account @entity {
+  id: ID!
+}
