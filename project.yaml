@@ -23,6 +23,6 @@ dataSources:
       handlers:
         - handler: handleEvent
           kind: substrate/EventHandler
-            filter:
+          filter:
             module: system
             method: NewAccount
