@@ -8,9 +8,7 @@ runner:
   query:
     name: '@subql/query'
     version: '*'
-description: >-
-  This project can be use as a starting point for developing your SubQuery
-  project
+description: ''
 repository: 'https://github.com/kennyt12237/SubQuery-Challenge-Project'
 schema:
   file: ./schema.graphql
@@ -25,3 +23,6 @@ dataSources:
       handlers:
         - handler: handleEvent
           kind: substrate/EventHandler
+            filter:
+            module: system
+            method: NewAccount
