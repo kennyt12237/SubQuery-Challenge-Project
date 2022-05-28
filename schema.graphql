@@ -1,7 +1,12 @@
 type Block @entity {
-  id: ID!
+  id: ID! # Hash value of the block
+  blockNumber: BigInt! # The number of the block
+  timestamp: Date! # In ISO format
+  accounts: [Account]! @derivedFrom(field: "block") 
 }
 
 type Account @entity {
-  id: ID!
+  id: ID! # The block number concatenated with the event number
+  address: String! @index(unique: true) # The polkadot account address
+  block: Block! 
 }
